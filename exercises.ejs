@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercises</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Exercises</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Weight</th>
+          <th>Date</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% exercises.forEach(exercise => { %>
+          <tr>
+            <td><%= exercise.name %></td>
+            <td><%= exercise.sets %></td>
+            <td><%= exercise.reps %></td>
+            <td><%= exercise.weight %></td>
+            <td><%= exercise.Workout.date %></td>
+            <td><a href="/edit/<%= exercise.id %>">Edit</a></td>
+            <td><a href="/delete/<%= exercise.id %>">Delete</a></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>

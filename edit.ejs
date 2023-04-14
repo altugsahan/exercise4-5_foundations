@@ -1,0 +1,17 @@
+<h1>Edit Weight</h1>
+<form method="post" action="/weights/<%= weight.id %>/edit">
+  <div>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" value="<%= weight.date %>" required>
+  </div>
+  <div>
+    <label for="value">Value:</label>
+    <input type="number" id="value" name="value" value="<%= weight.value %>" required>
+  </div>
+  <div>
+    <button type="submit">Save</button>
+    <form method="post" action="/weights/<%= weight.id %>/delete">
+      <button type="submit">Delete</button>
+    </form>
+  </div>
+</form>
